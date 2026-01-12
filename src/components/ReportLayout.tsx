@@ -1,12 +1,12 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router";
 import type { ReportItem } from "../lib/types";
+import { axiosClient } from "../lib/axiosClient";
 
 export default function ReportLayout() {
   const [reports, setReports] = useState<ReportItem[]>([]);
   useEffect(() => {
-    axios.get("/reports").then((res) => {
+    axiosClient.get("/reports").then((res) => {
       setReports(res.data);
     });
   }, []);
