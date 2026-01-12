@@ -1,0 +1,158 @@
+:root {
+  font-family: sans-serif;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+hr {
+  border: none; /* 기본 border 제거 */
+  height: 1px; /* 기본 높이 1px 설정 */
+  background-color: #ddd; /* 기본 배경색 */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.GnbLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.GnbLayout > header {
+  background-color: white;
+}
+
+.GnbLayout > main {
+  flex-grow: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.gnb nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.ReportLayout {
+  display: flex;
+  flex-grow: 1;
+}
+
+.ReportLayout > aside {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 10rem;
+}
+
+.ReportLayout > main {
+  background-color: white;
+  flex-grow: 1;
+}
+
+.BlankLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.BlankLayout > main {
+  background-color: white;
+  min-height: 30rem;
+  min-width: 40rem;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.chatlist {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.chat-bubble {
+  line-height: 1.6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  max-width: 80%;
+  --hue: 0;
+  background-color: hsl(var(--hue) 100% 97%);
+  font-size: 15px;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  --hue: 58;
+}
+
+.chat-bubble.ai {
+  --hue: 199;
+}
+
+.chat-bubble h3 {
+  font-size: 17px;
+}
+
+.chat-bubble h4 {
+  font-size: 16px;
+}
+
+.chat-bubble p {
+  margin: 0;
+}
+
+.chatinput {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
