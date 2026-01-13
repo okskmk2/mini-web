@@ -80,7 +80,6 @@ export default function ReportDetailPage() {
                 }}
               />
             </label>
-            <button type="reset">초기화</button>
             <button type="submit">조회</button>
           </form>
           <div>리포트 타입: {report.reportType}</div>
