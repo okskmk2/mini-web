@@ -60,8 +60,14 @@ export default function ReportDetailPage() {
         <>
           <h1>{report.name}</h1>
           <form className="filter-container" onSubmit={handleSubmit}>
-            <label>
-              <span>조회시작일자</span>
+            <fieldset>
+              <legend>조직</legend>
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </fieldset>
+            <fieldset>
+              <legend>기간</legend>
               <input
                 type="date"
                 value={startDt}
@@ -69,9 +75,6 @@ export default function ReportDetailPage() {
                   setStartDt(e.currentTarget.value);
                 }}
               />
-            </label>
-            <label>
-              <span>조회종료일자</span>
               <input
                 type="date"
                 value={endDt}
@@ -79,15 +82,17 @@ export default function ReportDetailPage() {
                   setEndDt(e.currentTarget.value);
                 }}
               />
-            </label>
+            </fieldset>
             <button type="submit">조회</button>
           </form>
           <div>리포트 타입: {report.reportType}</div>
-          {chartData.length > 0 ? (
-            <HighchartsReact highcharts={Highcharts} options={chartOptions} />
-          ) : (
-            <p>조회결과가 없습니다.</p>
-          )}
+          <div style={{ marginTop: "1rem" }}>
+            {chartData.length > 0 ? (
+              <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+            ) : (
+              <p>조회결과가 없습니다.</p>
+            )}
+          </div>
         </>
       )}
     </main>

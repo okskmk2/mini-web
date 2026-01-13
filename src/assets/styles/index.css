@@ -88,6 +88,11 @@ main {
   padding: 1rem 2rem;
 }
 
+.gnb > a {
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .gnb nav {
   display: flex;
   gap: 2rem;
@@ -200,9 +205,20 @@ main {
   border: 1px solid #555;
 }
 
-.filter-container {
+form.filter-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
   align-items: flex-end;
+  gap: 4px;
+}
+
+form.filter-container fieldset {
+  padding: 4px 4px;
+  display: flex;
+  gap: 4px;
+}
+
+form.filter-container fieldset legend {
+  font-size: 15px;
+  padding: 0 3px;
 }
