@@ -9,3 +9,8 @@ export interface ReportItem {
   name: string;
   reportType: ReportType;
 }
+
+export interface ChartDataItem {
+  sale_date: string;
+  amount: number;
+}
