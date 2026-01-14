@@ -170,6 +170,22 @@ main {
   border-radius: 8px 8px 8px 0;
 }
 
+@keyframes loading {
+  to {
+    background-color: hsl(var(--hue) 100% 97%);
+  }
+  from {
+    background-color: hsl(var(--hue) 100% 80%);
+  }
+}
+
+.chat-bubble.loading {
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
 .chat-bubble h3 {
   font-size: 17px;
 }

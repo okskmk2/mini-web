@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router";
-import GnbLayout from "./components/GnbLayout";
+import GnbLayout from "./layouts/GnbLayout";
+import ReportLayout from "./layouts/ReportLayout";
+import BlankLayout from "./layouts/BlankLayout";
 import MainPage from "./pages/MainPage";
 import ReportMainPage from "./pages/ReportMainPage";
 import AgentMainPage from "./pages/AgentMainPage";
-import ReportLayout from "./components/ReportLayout";
 import NotFoundPage from "./pages/error/NotFoundPage";
-import BlankLayout from "./components/BlankLayout";
 import ReportDetailPage from "./pages/ReportDetailPage";
 
 export const router = createBrowserRouter([

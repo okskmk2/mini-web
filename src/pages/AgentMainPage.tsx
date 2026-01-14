@@ -2,16 +2,7 @@ import { useEffect, useState } from "react";
 import cx from "classnames";
 import Markdown from "react-markdown";
 import { axiosClient } from "../lib/axiosClient";
-
-const enum ChatType {
-  USER = "U",
-  AI = "A",
-}
-
-interface ChatItem {
-  text: string;
-  chatType: ChatType;
-}
+import { ChatStatus, ChatType, type ChatItem } from "../lib/types";
 
 export default function AgentMainPage() {
   const [chatList, setChatList] = useState<ChatItem[]>([]);
@@ -41,6 +32,7 @@ export default function AgentMainPage() {
       const newChatList = [...prev];
       newChatList.push({
         chatType: ChatType.AI,
+        chatStatus: ChatStatus.PEND,
         text: "로딩 중...",
       });
       return newChatList;
@@ -62,7 +54,9 @@ export default function AgentMainPage() {
     }
     setChatList((prev) => {
       const newChatList = [...prev];
-      newChatList[newChatList.length - 1].text = output;
+      const lastChat = newChatList[newChatList.length - 1];
+      lastChat.text = output;
+      lastChat.chatStatus = ChatStatus.DONE;
       return newChatList;
     });
     await axiosClient.post("/chat/save", {
@@ -81,7 +75,8 @@ export default function AgentMainPage() {
               key={"chat" + i}
               className={cx(
                 "chat-bubble",
-                chat.chatType === ChatType.USER ? "user" : "ai"
+                chat.chatType === ChatType.USER ? "user" : "ai",
+                chat.chatStatus === ChatStatus.PEND && "loading"
               )}
             >
               <Markdown>{chat.text}</Markdown>

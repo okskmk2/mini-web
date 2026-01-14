@@ -2,7 +2,7 @@ import "./assets/styles/index.css";
 
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router";
-import { router } from "./router.tsx";
+import { router } from "./router.ts";
 
 createRoot(document.getElementById("root")!).render(
   <RouterProvider router={router} />
