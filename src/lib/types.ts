@@ -32,3 +32,8 @@ export interface ChatItem {
   text: string;
   chatStatus?: ChatStatus;
 }
+
+export interface User {
+  id: string;
+  name: string;
+}

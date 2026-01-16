@@ -7,6 +7,7 @@ import ReportMainPage from "./pages/report/ReportMainPage";
 import AgentMainPage from "./pages/agent/AgentMainPage";
 import NotFoundPage from "./pages/error/NotFoundPage";
 import ReportDetailPage from "./pages/report/ReportDetailPage";
+import LoginPage from "./pages/LoginPage";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
     path: "/",
     Component: BlankLayout,
     children: [
+      {
+        path: "login",
+        Component: LoginPage,
+      },
       {
         path: "*",
         Component: NotFoundPage,
