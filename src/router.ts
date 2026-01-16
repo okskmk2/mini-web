@@ -3,10 +3,10 @@ import GnbLayout from "./layouts/GnbLayout";
 import ReportLayout from "./layouts/ReportLayout";
 import BlankLayout from "./layouts/BlankLayout";
 import MainPage from "./pages/MainPage";
-import ReportMainPage from "./pages/ReportMainPage";
-import AgentMainPage from "./pages/AgentMainPage";
+import ReportMainPage from "./pages/report/ReportMainPage";
+import AgentMainPage from "./pages/agent/AgentMainPage";
 import NotFoundPage from "./pages/error/NotFoundPage";
-import ReportDetailPage from "./pages/ReportDetailPage";
+import ReportDetailPage from "./pages/report/ReportDetailPage";
 
 export const router = createBrowserRouter([
   {

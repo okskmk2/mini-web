@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router";
-import type { ChartDataItem, ReportItem } from "../lib/types";
-import { axiosClient } from "../lib/axiosClient";
+import type { ChartDataItem, ReportItem } from "../../lib/types";
+import { axiosClient } from "../../lib/axiosClient";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 

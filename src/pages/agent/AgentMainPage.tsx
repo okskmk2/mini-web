@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import cx from "classnames";
 import Markdown from "react-markdown";
-import { axiosClient } from "../lib/axiosClient";
-import { ChatStatus, ChatType, type ChatItem } from "../lib/types";
+import { axiosClient } from "../../lib/axiosClient";
+import { ChatStatus, ChatType, type ChatItem } from "../../lib/types";
 
 export default function AgentMainPage() {
   const [chatList, setChatList] = useState<ChatItem[]>([]);
