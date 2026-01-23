@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "http://mini-server-485206.du.r.appspot.com",
   adapter: "fetch",
 });
 
